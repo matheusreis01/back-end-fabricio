@@ -1,0 +1,29 @@
+// Captura os dois números do usuário
+const num1 = Number(prompt("Digite o primeiro número:"));
+const num2 = Number(prompt("Digite o segundo número:"));
+
+// Realiza os cálculos
+const soma = num1 + num2;
+const subtracao = num1 - num2;
+const multiplicacao = num1 * num2;
+
+// Verificação para evitar divisão por zero
+let divisao;
+if (num2 !== 0) {
+    divisao = num1 / num2;
+} else {
+    divisao = "Erro (divisão por zero)";
+}
+
+// Exibe os resultados formatados
+const resultadoFinal = `
+Resultados para os números ${num1} e ${num2}:
+----------------------------
+Soma: ${soma}
+Subtração: ${subtracao}
+Multiplicação: ${multiplicacao}
+Divisão: ${divisao}
+`;
+
+console.log(resultadoFinal);
+alert(resultadoFinal);
